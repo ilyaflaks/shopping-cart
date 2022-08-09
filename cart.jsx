@@ -142,7 +142,7 @@ const Products = (props) => {
 
   let cartList = cart.map((item, index) => {
     return (
-      <Card key={index}>
+      <Card key={index} onClick={() => deleteCartItem(index)}>
         <Card.Header>
           <Accordion.Toggle as={Button} variant="link" eventKey={1 + index}>
             {item.name}
