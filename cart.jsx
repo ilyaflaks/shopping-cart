@@ -127,9 +127,15 @@ const Products = (props) => {
       <li key={index}>
         <Image src={photos[index % 4]} width={70} roundedCircle></Image>
         <Button variant="primary" size="large">
-          {item.name}:{item.cost}-Stock:{item.instock}
+          {item.name}
+          {item.cost}/Stock:{item.instock}
         </Button>
-        <input name={item.name} type="submit" onClick={addToCart}></input>
+        <input
+          name={item.name}
+          type="submit"
+          value="Add to Cart"
+          onClick={addToCart}
+        ></input>
       </li>
     );
   });
